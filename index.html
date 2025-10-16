@@ -118,16 +118,29 @@
   #hero img {
   width: 120px;
   border-radius: 50%;
-  background: #fff; /* 👈 White background circle */
-  padding: 10px; /* Adds breathing space inside */
+  background: #f8f3e6; /* warm ivory tone */
+  padding: 10px;
   border: 2px solid var(--accent);
   margin-bottom: 15px;
   transition: box-shadow 0.3s ease;
-  box-shadow: 0 0 10px rgba(216,185,111,0.25);
+  box-shadow: 0 0 8px rgba(216,185,111,0.25);
 }
   #hero img:hover {
-    box-shadow: 0 0 15px var(--accent);
+  box-shadow: 0 0 18px rgba(216,185,111,0.4), 0 0 6px rgba(216,185,111,0.25);
+  animation: twinkle 1.5s infinite ease-in-out;
+}
+
+/* ✨ Twinkle animation */
+@keyframes twinkle {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(216,185,111,0.3), 0 0 3px rgba(216,185,111,0.15);
+    transform: scale(1);
   }
+  50% {
+    box-shadow: 0 0 20px rgba(255,215,130,0.6), 0 0 10px rgba(255,200,90,0.35);
+    transform: scale(1.03);
+  }
+}
   #hero h1 { font-size: 46px; letter-spacing: 1px; margin-bottom: 5px; }
   #hero p { font-size: 18px; color: #e6e6e6; margin: 8px 0; }
   /* 🔹 Hero Glow Enhancement (Balanced Professional Version) */
@@ -343,6 +356,7 @@
 
 </body>
 </html>
+
 
 
 
