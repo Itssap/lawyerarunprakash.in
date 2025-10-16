@@ -116,12 +116,15 @@
     text-align: center;
   }
   #hero img {
-    width: 120px;
-    border-radius: 50%;
-    border: 2px solid var(--accent);
-    margin-bottom: 15px;
-    transition: box-shadow 0.3s ease;
-  }
+  width: 120px;
+  border-radius: 50%;
+  background: #fff; /* 👈 White background circle */
+  padding: 10px; /* Adds breathing space inside */
+  border: 2px solid var(--accent);
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(216,185,111,0.25);
+}
   #hero img:hover {
     box-shadow: 0 0 15px var(--accent);
   }
@@ -340,5 +343,6 @@
 
 </body>
 </html>
+
 
 
