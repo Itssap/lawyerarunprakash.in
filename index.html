@@ -127,7 +127,15 @@
   }
   #hero h1 { font-size: 46px; letter-spacing: 1px; margin-bottom: 5px; }
   #hero p { font-size: 18px; color: #e6e6e6; margin: 8px 0; }
+    /* 🔹 Hero Glow Enhancement */
+  #hero h1, 
+  #hero p:first-of-type {
+    text-shadow: 0 0 8px #e0b76b, 0 0 16px rgba(224,183,107,0.35);
+  }
 
+  #hero img {
+    box-shadow: 0 0 25px rgba(224,183,107,0.35);
+  }
   /* 🔹 About Section */
   #about {
     display: flex;
@@ -331,3 +339,4 @@
 
 </body>
 </html>
+
