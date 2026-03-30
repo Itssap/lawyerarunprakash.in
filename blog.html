@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Legal Articles & Guides | Arun Prakash, Advocate | Supreme Court of India</title>
+<meta name="description" content="Legal articles and guides by Advocate Arun Prakash, practicing before the Supreme Court of India. Plain English explanations of SLP, criminal law, bail, High Court appeals and more.">
+<meta name="keywords" content="legal articles India, Supreme Court guide, SLP explained, criminal law India, bail India, High Court appeal, Arun Prakash Advocate">
+<meta name="author" content="Arun Prakash">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/Itssap/lawyerarunprakash.in/main/favicon-32x32.png">
+
+<style>
+  :root {
+    --bg-dark: #0f0f0f;
+    --bg-deep: #1a1a1a;
+    --accent: #caa96e;
+    --text-light: #f8f8f8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Georgia', serif; background: var(--bg-dark); color: var(--text-light); line-height: 1.9; }
+
+  /* Header */
+  header {
+    background: #080808;
+    border-bottom: 2px solid var(--accent);
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header a { color: var(--accent); text-decoration: none; font-size: 15px; font-family: 'Poppins', sans-serif; }
+  header .logo { font-size: 20px; font-weight: bold; letter-spacing: 1px; }
+
+  /* Page Hero */
+  .page-hero {
+    background: var(--bg-deep);
+    padding: 60px 8% 50px;
+    border-bottom: 1px solid #2a2a2a;
+  }
+  .page-hero h1 { font-size: 36px; color: var(--text-light); margin-bottom: 12px; }
+  .page-hero p { color: #999; font-family: 'Poppins', sans-serif; font-size: 15px; max-width: 600px; }
+
+  /* ── VIEW 1: Category Tiles ── */
+  #view-categories { display: block; }
+  .categories-section { padding: 50px 8%; max-width: 1100px; margin: 0 auto; }
+  .categories-section h2 {
+    color: var(--accent);
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .category-tile {
+    background: #141414;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 30px 25px;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .category-tile:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+  }
+  .category-tile .tile-icon { font-size: 32px; margin-bottom: 15px; }
+  .category-tile .tile-name {
+    font-size: 18px;
+    color: var(--text-light);
+    font-family: 'Georgia', serif;
+    margin-bottom: 8px;
+  }
+  .category-tile .tile-desc {
+    font-size: 13px;
+    color: #888;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  .tile-count {
+    font-size: 12px;
+    color: var(--accent);
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+  }
+
+  /* ── VIEW 2: Article List by Category ── */
+  #view-list { display: none; }
+  .list-header {
+    background: var(--bg-deep);
+    padding: 40px 8%;
+    border-bottom: 1px solid #2a2a2a;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .list-header .back-cat {
+    color: var(--accent);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    padding: 0;
+  }
+  .list-header h2 { font-size: 28px; color: var(--text-light); }
+  .list-header .cat-icon { font-size: 28px; }
+
+  #cards-container { max-width: 860px; margin: 0 auto; padding: 20px 8% 60px; }
+
+  .article-card { border-bottom: 1px solid #2a2a2a; padding: 28px 0; cursor: pointer; }
+  .article-card:hover .article-card-title { color: var(--accent); }
+  .article-card-title { font-size: 21px; color: var(--text-light); margin-bottom: 10px; transition: color 0.2s; line-height: 1.4; }
+  .article-card-intro { color: #999; font-size: 15px; font-family: 'Poppins', sans-serif; margin-bottom: 12px; line-height: 1.6; }
+  .article-card-meta { font-size: 13px; color: #666; font-family: 'Poppins', sans-serif; }
+  .read-more { color: var(--accent); border-bottom: 1px solid var(--accent); padding-bottom: 1px; }
+
+  .empty-state {
+    padding: 60px 0;
+    text-align: center;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+  }
+  .empty-state span { font-size: 36px; display: block; margin-bottom: 15px; }
+
+  /* ── VIEW 3: Single Article ── */
+  #view-article { display: none; }
+  .article-hero { background: var(--bg-deep); padding: 60px 8% 40px; border-bottom: 1px solid #2a2a2a; }
+  .article-hero .art-category {
+    color: var(--accent); font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px;
+  }
+  .article-hero h1 { font-size: 34px; color: var(--text-light); line-height: 1.3; max-width: 800px; margin-bottom: 20px; }
+  .article-hero .art-meta { font-size: 14px; color: #999; font-family: 'Poppins', sans-serif; }
+
+  .article-body { max-width: 780px; margin: 0 auto; padding: 50px 8%; }
+  .article-body p { margin-bottom: 22px; font-size: 17px; color: #e0e0e0; text-align: justify; }
+  .article-body h2 { color: var(--accent); font-size: 22px; margin: 40px 0 15px; font-family: 'Georgia', serif; }
+  .highlight-box {
+    border-left: 4px solid var(--accent); background: #1a1a1a;
+    padding: 20px 25px; margin: 30px 0; border-radius: 0 6px 6px 0;
+    font-size: 16px; color: #ddd; font-style: italic;
+  }
+  .disclaimer {
+    margin-top: 50px; padding: 20px; border: 1px solid #2a2a2a;
+    border-radius: 6px; font-size: 13px; color: #777;
+    font-family: 'Poppins', sans-serif; line-height: 1.7;
+  }
+  .back-btn {
+    display: inline-block; margin-top: 35px;
+    color: var(--accent); font-family: 'Poppins', sans-serif;
+    font-size: 14px; text-decoration: none;
+    border-bottom: 1px solid var(--accent); padding-bottom: 2px;
+    cursor: pointer; background: none;
+    border-top: none; border-left: none; border-right: none;
+  }
+
+  /* Footer */
+  footer {
+    background: #080808; text-align: center;
+    padding: 25px 8%; border-top: 2px solid var(--accent);
+    font-size: 13px; color: #bbb;
+    font-family: 'Poppins', sans-serif; margin-top: 60px;
+  }
+  #wa {
+    position: fixed; bottom: 25px; right: 25px;
+    background: #25D366; color: #fff;
+    padding: 16px 18px; border-radius: 50%;
+    font-size: 22px; text-decoration: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4); z-index: 999;
+  }
+
+  @media(max-width: 768px) {
+    .page-hero h1, .article-hero h1 { font-size: 26px; }
+    .article-body { padding: 40px 6%; }
+    header { flex-direction: column; gap: 10px; text-align: center; }
+    .category-grid { grid-template-columns: 1fr; }
+    .list-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="https://lawyerarunprakash.in" class="logo">ARUN PRAKASH</a>
+  <a href="https://lawyerarunprakash.in">← Back to Home</a>
+</header>
+
+<!-- VIEW 1: CATEGORY TILES -->
+<div id="view-categories">
+  <div class="page-hero">
+    <h1>Legal Articles & Guides</h1>
+    <p>Plain English explanations of Indian law — for individuals, families, and those seeking justice at any court level.</p>
+  </div>
+  <div class="categories-section">
+    <h2>Browse by Topic</h2>
+    <div class="category-grid" id="category-grid"></div>
+  </div>
+</div>
+
+<!-- VIEW 2: ARTICLE LIST -->
+<div id="view-list">
+  <div class="list-header">
+    <div>
+      <button class="back-cat" onclick="showCategories()">← All Topics</button>
+      <div style="display:flex;align-items:center;gap:12px;margin-top:10px;">
+        <span class="cat-icon" id="list-icon"></span>
+        <h2 id="list-title"></h2>
+      </div>
+    </div>
+  </div>
+  <div id="cards-container"></div>
+</div>
+
+<!-- VIEW 3: SINGLE ARTICLE -->
+<div id="view-article">
+  <div class="article-hero">
+    <p class="art-category" id="single-category"></p>
+    <h1 id="single-title"></h1>
+    <p class="art-meta" id="single-meta"></p>
+  </div>
+  <div class="article-body">
+    <div id="single-content"></div>
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is published for informational purposes only and does not constitute legal advice. It does not create an advocate-client relationship. Every case is different and the applicable law may vary depending on the facts and circumstances. Persons seeking legal advice should consult a qualified advocate. This article is compliant with the Bar Council of India Rules on advertisement and solicitation.
+    </div>
+    <button class="back-btn" onclick="showList(currentCategoryId)">← Back to Articles</button>
+  </div>
+</div>
+
+<a id="wa" href="https://wa.me/918248317214" target="_blank">💬</a>
+
+<footer>
+  © 2025 Arun Prakash, Advocate — All Rights Reserved<br>
+  <small>Compliant with Bar Council of India Rules</small>
+</footer>
+
+<script src="articles.js"></script>
+<script>
+
+  let currentCategoryId = null;
+
+  // ── Render category tiles ──
+  function renderCategories() {
+    const grid = document.getElementById('category-grid');
+    grid.innerHTML = '';
+    categories.forEach(cat => {
+      const count = articles.filter(a => a.categoryId === cat.id).length;
+      grid.innerHTML += `
+        <div class="category-tile" onclick="showList('${cat.id}')">
+          <div class="tile-icon">${cat.icon}</div>
+          <div class="tile-name">${cat.name}</div>
+          <div class="tile-desc">${cat.description}</div>
+          <div class="tile-count">${count} article${count !== 1 ? 's' : ''}</div>
+        </div>`;
+    });
+  }
+
+  // ── Show category tiles ──
+  function showCategories() {
+    document.getElementById('view-categories').style.display = 'block';
+    document.getElementById('view-list').style.display = 'none';
+    document.getElementById('view-article').style.display = 'none';
+    window.scrollTo(0, 0);
+  }
+
+  // ── Show article list for a category ──
+  function showList(categoryId) {
+    currentCategoryId = categoryId;
+    const cat = categories.find(c => c.id === categoryId);
+    const filtered = articles.filter(a => a.categoryId === categoryId);
+
+    document.getElementById('list-icon').textContent = cat.icon;
+    document.getElementById('list-title').textContent = cat.name;
+
+    const container = document.getElementById('cards-container');
+    container.innerHTML = '';
+
+    if (filtered.length === 0) {
+      container.innerHTML = `
+        <div class="empty-state">
+          <span>📝</span>
+          Articles on this topic are being prepared.<br>Please check back soon.
+        </div>`;
+    } else {
+      filtered.forEach((article, i) => {
+        const globalIndex = articles.indexOf(article);
+        container.innerHTML += `
+          <div class="article-card" onclick="showArticle(${globalIndex})">
+            <h2 class="article-card-title">${article.title}</h2>
+            <p class="article-card-intro">${article.intro}</p>
+            <p class="article-card-meta">
+              By Arun Prakash, Advocate &nbsp;·&nbsp; ${article.date}
+              &nbsp;&nbsp;<span class="read-more">Read article →</span>
+            </p>
+          </div>`;
+      });
+    }
+
+    document.getElementById('view-categories').style.display = 'none';
+    document.getElementById('view-list').style.display = 'block';
+    document.getElementById('view-article').style.display = 'none';
+    window.scrollTo(0, 0);
+  }
+
+  // ── Show single article ──
+  function showArticle(index) {
+    const a = articles[index];
+    document.getElementById('single-category').textContent = a.category + ' · Legal Guide';
+    document.getElementById('single-title').textContent = a.title;
+    document.getElementById('single-meta').textContent = 'By Arun Prakash, Advocate · Supreme Court of India · ' + a.date;
+
+    let html = '';
+    const blocks = a.content.split('\n\n');
+    blocks.forEach(block => {
+      block = block.trim();
+      if (!block) return;
+      if (block.startsWith('HEADING:')) {
+        html += `<h2>${block.replace('HEADING:', '').trim()}</h2>`;
+      } else if (block.startsWith('HIGHLIGHT:')) {
+        html += `<div class="highlight-box">${block.replace('HIGHLIGHT:', '').trim()}</div>`;
+      } else {
+        html += `<p>${block}</p>`;
+      }
+    });
+
+    document.getElementById('single-content').innerHTML = html;
+    document.getElementById('view-categories').style.display = 'none';
+    document.getElementById('view-list').style.display = 'none';
+    document.getElementById('view-article').style.display = 'block';
+    window.scrollTo(0, 0);
+  }
+
+  // Init
+  renderCategories();
+
+</script>
+</body>
+</html>
