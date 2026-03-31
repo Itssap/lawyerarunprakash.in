@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Arun Prakash | Supreme Court Advocate | Criminal Law | New Delhi</title>
-
-<!-- 🔹 META OPTIMIZATION -->
 <meta name="description" content="Arun Prakash is an Advocate practicing before the Hon'ble Supreme Court of India, specialising in criminal law, SLP matters, and appellate litigation. Serving clients from Tamil Nadu and across India.">
 <meta name="keywords" content="Supreme Court Advocate, Criminal Lawyer India, SLP Advocate Delhi, Tamil Nadu Supreme Court Lawyer, Appellate Advocate India, Criminal Defence Supreme Court, Arun Prakash Advocate">
 <meta name="author" content="Arun Prakash">
@@ -18,14 +16,12 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Arun Prakash | Supreme Court Advocate | Criminal Law">
 <meta name="twitter:description" content="Advocate practicing before the Hon'ble Supreme Court of India. Specialising in criminal law, SLP matters, and appellate litigation.">
-
-<!-- 🔹 FAVICONS -->
 <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/Itssap/lawyerarunprakash.in/main/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/Itssap/lawyerarunprakash.in/main/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/Itssap/lawyerarunprakash.in/main/favicon-16x16.png">
 <link rel="manifest" href="https://raw.githubusercontent.com/Itssap/lawyerarunprakash.in/main/site.webmanifest">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Georgia&display=swap" rel="stylesheet">
 
-<!-- 🔹 STRUCTURED DATA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -36,345 +32,678 @@
   "description": "Advocate practicing before the Hon'ble Supreme Court of India, specialising in criminal law, SLP matters, and appellate litigation.",
   "telephone": "+918248317214",
   "email": "mail@lawyerarunprakash.in",
-  "founder": {
-    "@type": "Person",
-    "name": "Arun Prakash",
-    "jobTitle": "Advocate",
-    "url": "https://lawyerarunprakash.in/"
-  },
+  "founder": {"@type": "Person", "name": "Arun Prakash", "jobTitle": "Advocate", "url": "https://lawyerarunprakash.in/"},
   "areaServed": ["New Delhi", "Tamil Nadu", "India"],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "C-248, East End Apartments, New Ashok Nagar",
-    "addressLocality": "New Delhi",
-    "postalCode": "110096",
-    "addressCountry": "India"
-  }
+  "address": {"@type": "PostalAddress", "streetAddress": "C-248, East End Apartments, New Ashok Nagar", "addressLocality": "New Delhi", "postalCode": "110096", "addressCountry": "India"}
 }
 </script>
 
 <style>
-  :root {
-    --bg-dark: #0f0f0f;
-    --bg-deep: #1a1a1a;
-    --accent: #caa96e;
-    --text-light: #f8f8f8;
-  }
+/* ── LIGHT MODE (default) ── */
+:root {
+  --bg: #ffffff;
+  --bg2: #f5f7fa;
+  --bg3: #eef1f6;
+  --primary: #1a3a5c;
+  --accent: #caa96e;
+  --text: #1a1a1a;
+  --text2: #555555;
+  --text3: #888888;
+  --border: #e0e5ee;
+  --hero-bg: #1a3a5c;
+  --hero-text: #ffffff;
+  --hero-sub: rgba(255,255,255,0.8);
+  --btn-bg: #1a3a5c;
+  --btn-text: #ffffff;
+  --card-bg: #ffffff;
+  --nav-bg: #ffffff;
+  --nav-border: #e0e5ee;
+  --shadow: 0 2px 20px rgba(0,0,0,0.08);
+}
 
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: var(--bg-dark);
-    color: var(--text-light);
-    line-height: 1.7;
-  }
+/* ── DARK MODE ── */
+[data-theme="dark"] {
+  --bg: #0f0f0f;
+  --bg2: #1a1a1a;
+  --bg3: #222222;
+  --primary: #caa96e;
+  --accent: #1a3a5c;
+  --text: #f8f8f8;
+  --text2: #cccccc;
+  --text3: #888888;
+  --border: #2a2a2a;
+  --hero-bg: #0f0f0f;
+  --hero-text: #f8f8f8;
+  --hero-sub: rgba(248,248,248,0.7);
+  --btn-bg: #caa96e;
+  --btn-text: #111111;
+  --card-bg: #1a1a1a;
+  --nav-bg: #0f0f0f;
+  --nav-border: #2a2a2a;
+  --shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
 
-  section { padding: 70px 8%; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-  h1, h2, h3 {
-    font-family: 'Georgia', serif;
-    color: var(--accent);
-    margin-top: 0;
-  }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  transition: background 0.3s, color 0.3s;
+}
 
-  /* 🔹 Disclaimer Modal */
-  #disclaimerModal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.8);
-    backdrop-filter: blur(6px);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-  #disclaimerContent {
-    background: #1b1b1b;
-    border: 2px solid var(--accent);
-    border-radius: 8px;
-    padding: 25px;
-    max-width: 600px;
-    text-align: center;
-    animation: fadeIn 0.6s ease;
-  }
-  #disclaimerContent p { color: #eee; font-size: 15px; }
-  #disclaimerContent button {
-    margin-top: 12px;
-    background: var(--accent);
-    border: none;
-    color: #111;
-    padding: 8px 18px;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  @keyframes fadeIn { from {opacity:0;transform:scale(0.95);} to {opacity:1;transform:scale(1);} }
+/* ── DISCLAIMER ── */
+#disclaimerModal {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+  display: none; justify-content: center; align-items: center;
+  z-index: 9999; padding: 20px;
+}
+#disclaimerContent {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+#disclaimerContent h3 { color: var(--primary); margin-bottom: 12px; font-size: 18px; }
+#disclaimerContent p { color: var(--text2); font-size: 14px; line-height: 1.6; margin-bottom: 20px; }
+#disclaimerContent button {
+  background: var(--btn-bg); color: var(--btn-text);
+  border: none; padding: 10px 24px;
+  border-radius: 6px; font-weight: 600;
+  cursor: pointer; font-size: 14px;
+}
 
-  /* 🔹 Hero */
-  #hero {
-    background: url('https://raw.githubusercontent.com/Itssap/lawyerarunprakash.in/main/headera.jpg') center/cover no-repeat;
-    height: 85vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  #hero img {
-  width: 120px;
+/* ── NAVBAR ── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+  padding: 0 5%;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+  box-shadow: var(--shadow);
+  transition: background 0.3s;
+}
+.nav-logo {
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+.nav-logo span { color: var(--accent); }
+.nav-controls { display: flex; align-items: center; gap: 8px; }
+
+.toggle-btn {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text2);
+  transition: all 0.2s;
+}
+.toggle-btn:hover { background: var(--bg3); }
+
+.lang-btn {
+  background: var(--primary);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+.lang-btn:hover { opacity: 0.85; }
+
+/* ── HERO ── */
+#hero {
+  background: var(--hero-bg);
+  background-image: linear-gradient(135deg, var(--hero-bg) 0%, #0d2238 100%);
+  padding: 80px 5% 70px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+[data-theme="dark"] #hero {
+  background: #0f0f0f;
+  background-image: none;
+  border-bottom: 1px solid var(--border);
+}
+.hero-logo {
+  width: 90px; height: 90px;
   border-radius: 50%;
-  background: #f8f3e6;
-  padding: 10px;
   border: 2px solid var(--accent);
-  margin-bottom: 15px;
-  transition: box-shadow 0.3s ease;
-  box-shadow: 0 0 8px rgba(216,185,111,0.25);
+  background: rgba(255,255,255,0.1);
+  padding: 8px;
+  margin: 0 auto 20px;
+  display: block;
 }
-  #hero img:hover {
-  box-shadow: 0 0 18px rgba(216,185,111,0.4), 0 0 6px rgba(216,185,111,0.25);
-  animation: twinkle 1.5s infinite ease-in-out;
+#hero h1 {
+  font-family: 'Georgia', serif;
+  font-size: clamp(28px, 5vw, 48px);
+  color: var(--hero-text);
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+#hero .hero-sub {
+  font-size: clamp(14px, 2.5vw, 17px);
+  color: var(--hero-sub);
+  margin-bottom: 6px;
+}
+#hero .hero-divider {
+  width: 60px; height: 2px;
+  background: var(--accent);
+  margin: 20px auto;
+  border: none;
+}
+#hero .hero-desc {
+  font-size: clamp(13px, 2vw, 15px);
+  color: var(--hero-sub);
+  max-width: 600px;
+  margin: 0 auto 28px;
+}
+.hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--accent);
+  color: #111;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-block;
+  transition: opacity 0.2s;
+}
+.btn-primary:hover { opacity: 0.85; }
+.btn-outline {
+  background: transparent;
+  color: var(--hero-text);
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  display: inline-block;
+  transition: all 0.2s;
+}
+.btn-outline:hover { background: rgba(255,255,255,0.1); }
+
+/* ── SECTIONS ── */
+section { padding: 70px 5%; }
+.section-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.section-title {
+  font-family: 'Georgia', serif;
+  font-size: clamp(22px, 3vw, 32px);
+  color: var(--text);
+  margin-bottom: 16px;
+}
+.section-desc {
+  font-size: 15px;
+  color: var(--text2);
+  max-width: 580px;
+  line-height: 1.8;
 }
 
-@keyframes twinkle {
-  0%, 100% {
-    box-shadow: 0 0 8px rgba(216,185,111,0.3), 0 0 3px rgba(216,185,111,0.15);
-    transform: scale(1);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(255,215,130,0.6), 0 0 10px rgba(255,200,90,0.35);
-    transform: scale(1.03);
-  }
+/* ── ABOUT ── */
+#about { background: var(--bg2); }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
 }
-  #hero h1 { font-size: 46px; letter-spacing: 1px; margin-bottom: 5px; }
-  #hero p { font-size: 18px; color: #e6e6e6; margin: 8px 0; }
-#hero h1,
-#hero p {
-  text-shadow: 0 0 3px #d8b96f, 0 0 6px rgba(216,185,111,0.25);
+.about-img {
+  width: 100%;
+  border-radius: 12px;
+  border: 3px solid var(--accent);
+  box-shadow: var(--shadow);
+}
+.about-text p {
+  color: var(--text2);
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 16px;
+  text-align: justify;
+}
+.cred-btn {
+  background: none;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 8px;
+  transition: all 0.2s;
+}
+.cred-btn:hover { background: var(--primary); color: var(--btn-text); }
+.cred-box {
+  display: none;
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg3);
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.8;
 }
 
-#hero img {
-  box-shadow: 0 0 10px rgba(216,185,111,0.25);
+/* ── PRACTICE ── */
+#practice { background: var(--bg); }
+.practice-inner { max-width: 1100px; margin: 0 auto; }
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 36px;
+}
+.practice-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.practice-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.practice-card .icon { font-size: 24px; margin-bottom: 10px; }
+.practice-card h3 { font-size: 15px; color: var(--text); font-weight: 600; margin-bottom: 6px; }
+.practice-card p { font-size: 13px; color: var(--text3); line-height: 1.6; }
+
+/* ── ARTICLES ── */
+#articles { background: var(--bg2); }
+.articles-inner { max-width: 1100px; margin: 0 auto; }
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+  margin-top: 36px;
+}
+.article-tile {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+  display: block;
+}
+.article-tile:hover { border-color: var(--primary); transform: translateY(-2px); }
+.article-tile .tile-icon { font-size: 26px; margin-bottom: 10px; display: block; }
+.article-tile .tile-name { font-size: 14px; font-weight: 600; color: var(--primary); margin-bottom: 4px; }
+.article-tile .tile-desc { font-size: 12px; color: var(--text3); line-height: 1.5; }
+.articles-cta { margin-top: 28px; }
+
+/* ── CONTACT ── */
+#contact { background: var(--bg); }
+.contact-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+.contact-info h3 {
+  font-size: 15px;
+  color: var(--primary);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+.contact-info p {
+  font-size: 14px;
+  color: var(--text2);
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+.contact-info a { color: var(--primary); text-decoration: none; }
+.contact-map iframe {
+  width: 100%;
+  height: 260px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.btn-map {
+  display: inline-block;
+  margin-top: 12px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
 }
 
-  /* 🔹 About Section */
-  #about {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    background: var(--bg-deep);
-    gap: 40px;
-  }
-  #about div { flex: 1; min-width: 280px; }
-  #about img {
-    width: 100%;
-    max-width: 400px;
-    border: 3px solid var(--accent);
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.4);
-  }
-  #about p { text-align: justify; }
+/* ── FOOTER ── */
+footer {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 24px 5%;
+  font-size: 13px;
+  color: var(--text3);
+}
 
-  /* 🔹 Collapsible Credentials */
-  .cred-box {
-    margin-top: 15px;
-    border: 1px solid var(--accent);
-    border-radius: 6px;
-    padding: 10px;
-    display: none;
-  }
-  .cred-btn {
-    background: none;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    padding: 8px 14px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: 600;
-  }
-  .cred-btn:hover { background: var(--accent); color: #111; }
+/* ── WHATSAPP ── */
+#wa {
+  position: fixed; bottom: 24px; right: 24px;
+  background: #25D366; color: #fff;
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: transform 0.2s;
+}
+#wa:hover { transform: scale(1.1); }
 
-  /* 🔹 Practice */
-  #practice { background: #141414; }
-  #practice-content {
-    display: flex; flex-wrap: wrap; align-items: center; gap: 50px;
-  }
-  #practice ul {
-    list-style: none; padding: 0; margin: 0; columns: 2; column-gap: 30px;
-  }
-  #practice li { margin: 8px 0; }
-
-  /* 🔹 Contact */
-  #contact { text-align: center; }
-  iframe {
-    border: 2px solid var(--accent);
-    border-radius: 8px;
-    width: 100%;
-    max-width: 900px;
-    height: 320px;
-  }
-  a.btn {
-    background: var(--accent);
-    color: #111;
-    padding: 12px 24px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    margin: 15px;
-  }
-
-  /* 🔹 WhatsApp */
-  #wa {
-    position: fixed;
-    bottom: 25px; right: 25px;
-    background: #25D366;
-    color: #fff;
-    padding: 16px 18px;
-    border-radius: 50%;
-    font-size: 22px;
-    text-decoration: none;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    z-index: 999;
-  }
-
-  /* 🔹 Footer */
-  footer {
-    background: #080808;
-    text-align: center;
-    padding: 25px 8%;
-    border-top: 2px solid var(--accent);
-    font-size: 14px;
-    color: #bbb;
-  }
-
-  @media(max-width:768px) {
-    section { padding: 50px 6%; }
-    #hero h1 { font-size: 36px; }
-    #practice ul { columns: 1; }
-  }
+/* ── MOBILE ── */
+@media(max-width: 768px) {
+  nav { padding: 0 4%; }
+  .nav-logo { font-size: 15px; }
+  .toggle-btn { padding: 5px 10px; font-size: 11px; }
+  .lang-btn { padding: 5px 10px; font-size: 11px; }
+  #hero { padding: 50px 5% 40px; }
+  section { padding: 50px 5%; }
+  .about-grid { grid-template-columns: 1fr; gap: 30px; }
+  .about-img { max-width: 300px; margin: 0 auto; display: block; }
+  .contact-inner { grid-template-columns: 1fr; gap: 30px; }
+  .practice-grid { grid-template-columns: 1fr 1fr; }
+  .articles-grid { grid-template-columns: 1fr 1fr; }
+}
+@media(max-width: 480px) {
+  .practice-grid { grid-template-columns: 1fr; }
+  .articles-grid { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; align-items: center; }
+}
 </style>
 </head>
 
 <body>
 
-<!-- Disclaimer Modal -->
+<!-- Disclaimer -->
 <div id="disclaimerModal">
   <div id="disclaimerContent">
-    <h3 style="color:var(--accent)">Disclaimer</h3>
-    <p>As per the Bar Council of India Rules, this website is for informational purposes only and does not solicit or advertise legal services.</p>
-    <button onclick="dismissDisclaimer()">I Understand</button>
+    <h3 data-en="Disclaimer" data-ta="அறிவிப்பு">Disclaimer</h3>
+    <p data-en="As per the Bar Council of India Rules, this website is for informational purposes only and does not solicit or advertise legal services."
+       data-ta="இந்திய வழக்கறிஞர் கவுன்சில் விதிகளின்படி, இந்த இணையதளம் தகவல் நோக்கங்களுக்காக மட்டுமே உள்ளது மற்றும் சட்ட சேவைகளை விளம்பரப்படுத்தவில்லை.">
+      As per the Bar Council of India Rules, this website is for informational purposes only and does not solicit or advertise legal services.
+    </p>
+    <button onclick="dismissDisclaimer()" data-en="I Understand" data-ta="புரிகிறது">I Understand</button>
   </div>
 </div>
 
+<!-- Navbar -->
+<nav>
+  <a href="#" class="nav-logo">ARUN <span>PRAKASH</span></a>
+  <div class="nav-controls">
+    <button class="toggle-btn" onclick="toggleTheme()" id="themeBtn">🌙 Dark</button>
+    <button class="lang-btn" onclick="toggleLang()" id="langBtn">தமிழ்</button>
+  </div>
+</nav>
+
 <!-- Hero -->
 <section id="hero">
-  <img src="https://raw.githubusercontent.com/Itssap/lawyerarunprakash.in/main/Logo.png" alt="Logo of Arun Prakash Advocate">
-  <h1>ARUN PRAKASH</h1>
-  <p>Advocate — Supreme Court of India & High Courts</p>
-  <hr style="width:80px;height:2px;background:var(--accent);border:none;margin:25px auto;">
-  <p>Practicing Advocate based in New Delhi, appearing before the Hon'ble Supreme Court of India and various High Courts and Tribunals.</p>
+  <img src="https://raw.githubusercontent.com/Itssap/lawyerarunprakash.in/main/Logo.png"
+       alt="Arun Prakash Advocate Logo" class="hero-logo">
+  <h1 data-en="ARUN PRAKASH" data-ta="அருண் பிரகாஷ்">ARUN PRAKASH</h1>
+  <p class="hero-sub" data-en="Advocate — Supreme Court of India & High Courts"
+     data-ta="வழக்கறிஞர் — இந்திய உச்சநீதிமன்றம் & உயர் நீதிமன்றங்கள்">
+    Advocate — Supreme Court of India & High Courts
+  </p>
+  <hr class="hero-divider">
+  <p class="hero-desc"
+     data-en="Practicing Advocate based in New Delhi, appearing before the Hon'ble Supreme Court of India and various High Courts and Tribunals."
+     data-ta="புது தில்லியில் பணியாற்றும் வழக்கறிஞர், இந்திய உச்சநீதிமன்றம் மற்றும் பல்வேறு உயர் நீதிமன்றங்களில் வாதிடுகிறார்.">
+    Practicing Advocate based in New Delhi, appearing before the Hon'ble Supreme Court of India and various High Courts and Tribunals.
+  </p>
+  <div class="hero-actions">
+    <a href="#contact" class="btn-primary" data-en="Contact Now" data-ta="தொடர்பு கொள்ளுங்கள்">Contact Now</a>
+    <a href="blog.html" class="btn-outline" data-en="Legal Guides" data-ta="சட்ட வழிகாட்டிகள்">Legal Guides</a>
+  </div>
 </section>
 
 <!-- About -->
 <section id="about">
-  <div>
-    <h2>About Arun Prakash</h2>
-    <p><strong>Arun Prakash</strong> is an Advocate enrolled with the Bar Council of Tamil Nadu &amp; Puducherry, practicing before the Hon'ble Supreme Court of India since 2018.</p>
-    <p>With focused expertise in criminal law and appellate litigation, he has represented clients in serious criminal matters including capital offence cases before the Supreme Court of India.</p>
-    <p>Originally from Tamil Nadu, he brings a deep understanding of the legal landscape of South Indian courts, while practicing at the apex court level in New Delhi. He is also involved in legal research, digital legal tools, and Tamil legal documentation.</p>
-    <button class="cred-btn" onclick="toggleCreds()">View Credentials</button>
-    <div id="creds" class="cred-box">
-      <p><strong>Enrolment No:</strong> MS/3431/2016<br>
-      <strong>Bar Council:</strong> Tamil Nadu &amp; Puducherry</p>
-    </div>
-  </div>
-  <div style="text-align:center;">
-    <img src="https://raw.githubusercontent.com/Itssap/lawyerarunprakash.in/main/arunprakash.jpg" alt="Advocate Arun Prakash">
-  </div>
-</section>
-
-<!-- Practice -->
-<section id="practice">
-  <div id="practice-content">
-    <div style="text-align:center;">
-      <img src="https://raw.githubusercontent.com/Itssap/lawyerarunprakash.in/main/court.jpg" alt="Law and Justice" style="width:100%;max-width:400px;border:5px solid var(--accent);border-radius:8px;">
+  <div class="about-grid">
+    <div class="about-text">
+      <p class="section-label" data-en="About" data-ta="என்னை பற்றி">About</p>
+      <h2 class="section-title" data-en="Arun Prakash" data-ta="அருண் பிரகாஷ்">Arun Prakash</h2>
+      <p data-en="Arun Prakash is an Advocate enrolled with the Bar Council of Tamil Nadu & Puducherry, practicing before the Hon'ble Supreme Court of India since 2018."
+         data-ta="அருண் பிரகாஷ் தமிழ்நாடு & புதுச்சேரி வழக்கறிஞர் கவுன்சிலில் பதிவு செய்யப்பட்ட வழக்கறிஞர், 2018 முதல் இந்திய உச்சநீதிமன்றத்தில் வாதிடுகிறார்.">
+        Arun Prakash is an Advocate enrolled with the Bar Council of Tamil Nadu & Puducherry, practicing before the Hon'ble Supreme Court of India since 2018.
+      </p>
+      <p data-en="With focused expertise in criminal law and appellate litigation, he has represented clients in serious criminal matters including capital offence cases before the Supreme Court of India."
+         data-ta="குற்றவியல் சட்டம் மற்றும் மேல்முறையீட்டு வழக்குகளில் சிறப்பு அனுபவத்துடன், மரண தண்டனை வழக்குகள் உட்பட தீவிர குற்றவியல் வழக்குகளில் உச்சநீதிமன்றத்தில் வாதிட்டுள்ளார்.">
+        With focused expertise in criminal law and appellate litigation, he has represented clients in serious criminal matters including capital offence cases before the Supreme Court of India.
+      </p>
+      <p data-en="Originally from Tamil Nadu, he brings a deep understanding of the legal landscape of South Indian courts, while practicing at the apex court level in New Delhi."
+         data-ta="தமிழ்நாட்டை சேர்ந்த அவர், தென்னிந்திய நீதிமன்றங்களின் சட்ட நிலப்பரப்பை ஆழமாக புரிந்து கொண்டு, புது தில்லியில் உச்சநீதிமன்றத்தில் வாதிடுகிறார்.">
+        Originally from Tamil Nadu, he brings a deep understanding of the legal landscape of South Indian courts, while practicing at the apex court level in New Delhi.
+      </p>
+      <button class="cred-btn" onclick="toggleCreds()"
+              data-en="View Credentials" data-ta="சான்றிதழ்கள் காண்க">View Credentials</button>
+      <div id="creds" class="cred-box">
+        <strong data-en="Enrolment No:" data-ta="பதிவு எண்:">Enrolment No:</strong> MS/3431/2016<br>
+        <strong data-en="Bar Council:" data-ta="வழக்கறிஞர் கவுன்சில்:">Bar Council:</strong>
+        <span data-en="Tamil Nadu & Puducherry" data-ta="தமிழ்நாடு & புதுச்சேரி">Tamil Nadu & Puducherry</span>
+      </div>
     </div>
     <div>
-      <h2>Practice Areas</h2>
-      <p>Providing strategic, ethical, and comprehensive legal representation across multiple forums.</p>
-      <ul>
-        <li>• Criminal Defence</li>
-        <li>• Appellate Practice</li>
-        <li>• Writ Jurisdiction</li>
-        <li>• Civil &amp; Property Disputes</li>
-        <li>• Special Leave Petitions (SLP)</li>
-        <li>• Legal Translation &amp; Documentation</li>
-      </ul>
+      <img src="https://raw.githubusercontent.com/Itssap/lawyerarunprakash.in/main/arunprakash.jpg"
+           alt="Advocate Arun Prakash at Supreme Court of India" class="about-img">
     </div>
   </div>
 </section>
 
-<!-- Legal Articles -->
-<section id="articles" style="background:#141414;text-align:center;">
-  <h2 style="margin-bottom:15px;">Legal Articles &amp; Guides</h2>
-  <p style="color:#999;font-family:'Poppins',sans-serif;font-size:15px;max-width:560px;margin:0 auto 40px;">Plain English explanations of Indian law — for individuals and families seeking to understand their rights and options.</p>
-  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;max-width:900px;margin:0 auto 40px;">
-    <a href="blog.html" style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:8px;padding:20px 25px;text-decoration:none;color:var(--text-light);font-family:'Poppins',sans-serif;font-size:14px;min-width:200px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#caa96e'" onmouseout="this.style.borderColor='#2a2a2a'">
-      <div style="font-size:26px;margin-bottom:10px;">⚖️</div>
-      <div style="color:var(--accent);font-weight:600;margin-bottom:5px;">SLP &amp; Supreme Court</div>
-      <div style="color:#777;font-size:13px;">Special Leave Petitions &amp; apex court practice</div>
-    </a>
-    <a href="blog.html" style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:8px;padding:20px 25px;text-decoration:none;color:var(--text-light);font-family:'Poppins',sans-serif;font-size:14px;min-width:200px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#caa96e'" onmouseout="this.style.borderColor='#2a2a2a'">
-      <div style="font-size:26px;margin-bottom:10px;">🏛️</div>
-      <div style="color:var(--accent);font-weight:600;margin-bottom:5px;">High Court &amp; Appeals</div>
-      <div style="color:#777;font-size:13px;">Appeals, revisions &amp; remedies</div>
-    </a>
-    <a href="blog.html" style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:8px;padding:20px 25px;text-decoration:none;color:var(--text-light);font-family:'Poppins',sans-serif;font-size:14px;min-width:200px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#caa96e'" onmouseout="this.style.borderColor='#2a2a2a'">
-      <div style="font-size:26px;margin-bottom:10px;">🗝️</div>
-      <div style="color:var(--accent);font-weight:600;margin-bottom:5px;">Bail &amp; Custody</div>
-      <div style="color:#777;font-size:13px;">Bail rights &amp; custody matters explained</div>
-    </a>
-    <a href="blog.html" style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:8px;padding:20px 25px;text-decoration:none;color:var(--text-light);font-family:'Poppins',sans-serif;font-size:14px;min-width:200px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#caa96e'" onmouseout="this.style.borderColor='#2a2a2a'">
-      <div style="font-size:26px;margin-bottom:10px;">🔒</div>
-      <div style="color:var(--accent);font-weight:600;margin-bottom:5px;">Criminal Law</div>
-      <div style="color:#777;font-size:13px;">Criminal trials, offences &amp; defence</div>
-    </a>
+<!-- Practice Areas -->
+<section id="practice">
+  <div class="practice-inner">
+    <p class="section-label" data-en="What I Do" data-ta="நான் செய்வது">What I Do</p>
+    <h2 class="section-title" data-en="Practice Areas" data-ta="வழக்கு பிரிவுகள்">Practice Areas</h2>
+    <p class="section-desc"
+       data-en="Strategic, ethical, and comprehensive legal representation across multiple forums."
+       data-ta="பல நீதிமன்றங்களில் மூலோபாய, நெறிமுறை மற்றும் விரிவான சட்ட பிரதிநிதித்துவம்.">
+      Strategic, ethical, and comprehensive legal representation across multiple forums.
+    </p>
+    <div class="practice-grid">
+      <div class="practice-card">
+        <div class="icon">⚖️</div>
+        <h3 data-en="Criminal Defence" data-ta="குற்றவியல் பாதுகாப்பு">Criminal Defence</h3>
+        <p data-en="Representing accused persons at all court levels including Supreme Court." data-ta="உச்சநீதிமன்றம் உட்பட அனைத்து நீதிமன்றங்களிலும் குற்றம் சாட்டப்பட்டவர்களுக்கு பிரதிநிதித்துவம்.">Representing accused persons at all court levels including Supreme Court.</p>
+      </div>
+      <div class="practice-card">
+        <div class="icon">📋</div>
+        <h3 data-en="Special Leave Petitions" data-ta="சிறப்பு அனுமதி மனு (SLP)">Special Leave Petitions</h3>
+        <p data-en="Filing and arguing SLPs before the Supreme Court of India under Article 136." data-ta="உச்சநீதிமன்றத்தில் சிறப்பு அனுமதி மனுக்களை தாக்கல் செய்து வாதிடுதல்.">Filing and arguing SLPs before the Supreme Court of India under Article 136.</p>
+      </div>
+      <div class="practice-card">
+        <div class="icon">🏛️</div>
+        <h3 data-en="Appellate Practice" data-ta="மேல்முறையீட்டு வழக்குகள்">Appellate Practice</h3>
+        <p data-en="Appeals before High Courts and Supreme Court in civil and criminal matters." data-ta="உயர் நீதிமன்றம் மற்றும் உச்சநீதிமன்றத்தில் மேல்முறையீடுகள்.">Appeals before High Courts and Supreme Court in civil and criminal matters.</p>
+      </div>
+      <div class="practice-card">
+        <div class="icon">📝</div>
+        <h3 data-en="Writ Jurisdiction" data-ta="ரிட் வழக்குகள்">Writ Jurisdiction</h3>
+        <p data-en="Constitutional remedies under Articles 32 and 226 before Supreme Court and High Courts." data-ta="உச்சநீதிமன்றம் மற்றும் உயர் நீதிமன்றங்களில் அரசியலமைப்பு நிவாரணங்கள்.">Constitutional remedies under Articles 32 and 226 before Supreme Court and High Courts.</p>
+      </div>
+      <div class="practice-card">
+        <div class="icon">🏠</div>
+        <h3 data-en="Civil & Property Disputes" data-ta="சிவில் & சொத்து தகராறுகள்">Civil & Property Disputes</h3>
+        <p data-en="Land disputes, property matters, and civil litigation at appellate level." data-ta="நில தகராறுகள், சொத்து வழக்குகள் மேல்முறையீட்டு நீதிமன்றங்களில்.">Land disputes, property matters, and civil litigation at appellate level.</p>
+      </div>
+      <div class="practice-card">
+        <div class="icon">🌐</div>
+        <h3 data-en="Legal Translation" data-ta="சட்ட மொழிபெயர்ப்பு">Legal Translation</h3>
+        <p data-en="Tamil to English legal document translation for court submissions." data-ta="நீதிமன்ற சமர்ப்பிப்புகளுக்காக தமிழ் முதல் ஆங்கிலம் வரை சட்ட மொழிபெயர்ப்பு.">Tamil to English legal document translation for court submissions.</p>
+      </div>
+    </div>
   </div>
-  <a href="blog.html" class="btn">Browse All Articles →</a>
+</section>
+
+<!-- Articles -->
+<section id="articles">
+  <div class="articles-inner">
+    <p class="section-label" data-en="Knowledge" data-ta="அறிவு">Knowledge</p>
+    <h2 class="section-title" data-en="Legal Articles & Guides" data-ta="சட்ட கட்டுரைகள் & வழிகாட்டிகள்">Legal Articles & Guides</h2>
+    <p class="section-desc"
+       data-en="Plain English explanations of Indian law — for individuals and families seeking to understand their rights."
+       data-ta="இந்திய சட்டத்தின் எளிய விளக்கங்கள் — தங்கள் உரிமைகளை புரிந்து கொள்ள விரும்பும் தனிநபர்கள் மற்றும் குடும்பங்களுக்காக.">
+      Plain English explanations of Indian law — for individuals and families seeking to understand their rights.
+    </p>
+    <div class="articles-grid">
+      <a href="blog.html" class="article-tile">
+        <span class="tile-icon">⚖️</span>
+        <div class="tile-name" data-en="SLP & Supreme Court" data-ta="SLP & உச்சநீதிமன்றம்">SLP & Supreme Court</div>
+        <div class="tile-desc" data-en="Special Leave Petitions & apex court practice" data-ta="சிறப்பு அனுமதி மனுக்கள் & உச்சநீதிமன்ற நடைமுறை">Special Leave Petitions & apex court practice</div>
+      </a>
+      <a href="blog.html" class="article-tile">
+        <span class="tile-icon">🏛️</span>
+        <div class="tile-name" data-en="High Court & Appeals" data-ta="உயர் நீதிமன்றம் & மேல்முறையீடுகள்">High Court & Appeals</div>
+        <div class="tile-desc" data-en="Appeals, revisions & remedies" data-ta="மேல்முறையீடுகள், திருத்தங்கள் & நிவாரணங்கள்">Appeals, revisions & remedies</div>
+      </a>
+      <a href="blog.html" class="article-tile">
+        <span class="tile-icon">🗝️</span>
+        <div class="tile-name" data-en="Bail & Custody" data-ta="ஜாமீன் & காவல்">Bail & Custody</div>
+        <div class="tile-desc" data-en="Bail rights & custody matters" data-ta="ஜாமீன் உரிமைகள் & காவல் விஷயங்கள்">Bail rights & custody matters</div>
+      </a>
+      <a href="blog.html" class="article-tile">
+        <span class="tile-icon">🔒</span>
+        <div class="tile-name" data-en="Criminal Law" data-ta="குற்றவியல் சட்டம்">Criminal Law</div>
+        <div class="tile-desc" data-en="Criminal trials, offences & defence" data-ta="குற்றவியல் விசாரணைகள், குற்றங்கள் & பாதுகாப்பு">Criminal trials, offences & defence</div>
+      </a>
+      <a href="blog.html" class="article-tile">
+        <span class="tile-icon">🔄</span>
+        <div class="tile-name" data-en="Transfer & Jurisdiction" data-ta="இடமாற்றம் & அதிகார வரம்பு">Transfer & Jurisdiction</div>
+        <div class="tile-desc" data-en="Transfer petitions & court jurisdiction" data-ta="இடமாற்ற மனுக்கள் & நீதிமன்ற அதிகார வரம்பு">Transfer petitions & court jurisdiction</div>
+      </a>
+    </div>
+    <div class="articles-cta">
+      <a href="blog.html" class="btn-primary" data-en="Browse All Articles →" data-ta="அனைத்து கட்டுரைகளையும் காண்க →">Browse All Articles →</a>
+    </div>
+  </div>
 </section>
 
 <!-- Contact -->
 <section id="contact">
-  <h2>Contact</h2>
-  <p>For professional correspondence and appointments, please find the details below.</p>
-  <div>
-    <h3>Office Address</h3>
-    <p>C-248, East End Apartments,<br>New Ashok Nagar,<br>New Delhi – 110096</p>
-    <h3>Contact Details</h3>
-    <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="97faf6fefbd7fbf6e0eef2e5f6e5e2f9e7e5f6fcf6e4ffb9fef9">[email&#160;protected]</a><br><strong>Phone:</strong> +91 8248317214</p>
+  <div style="max-width:900px; margin:0 auto 40px;">
+    <p class="section-label" data-en="Get in Touch" data-ta="தொடர்பு கொள்ளுங்கள்">Get in Touch</p>
+    <h2 class="section-title" data-en="Contact" data-ta="தொடர்பு">Contact</h2>
   </div>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d600.7977704151986!2d77.30209319973105!3d28.587358010745962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1760428561471!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
-  <div style="margin-top:25px;">
-    <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=C-248,+East+End+Apartments,+New+Ashok+Nagar,+New+Delhi+110096" target="_blank">📍 Get Directions</a>
+  <div class="contact-inner">
+    <div class="contact-info">
+      <h3 data-en="Office Address" data-ta="அலுவலக முகவரி">Office Address</h3>
+      <p>C-248, East End Apartments,<br>New Ashok Nagar,<br>New Delhi – 110096</p>
+      <h3 style="margin-top:20px;" data-en="Contact Details" data-ta="தொடர்பு விவரங்கள்">Contact Details</h3>
+      <p>
+        <strong data-en="Email:" data-ta="மின்னஞ்சல்:">Email:</strong>
+        <a href="mailto:mail@lawyerarunprakash.in">mail@lawyerarunprakash.in</a>
+      </p>
+      <p>
+        <strong data-en="Phone:" data-ta="தொலைபேசி:">Phone:</strong>
+        <a href="tel:+918248317214">+91 8248317214</a>
+      </p>
+      <p>
+        <strong data-en="WhatsApp:" data-ta="வாட்ஸ்அப்:">WhatsApp:</strong>
+        <a href="https://wa.me/918248317214" target="_blank" data-en="Chat Now" data-ta="இப்போது பேசுங்கள்">Chat Now</a>
+      </p>
+    </div>
+    <div class="contact-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d600.7977704151986!2d77.30209319973105!3d28.587358010745962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1760428561471!5m2!1sen!2sin"
+              allowfullscreen="" loading="lazy" title="Office Location"></iframe>
+      <a class="btn-map" href="https://www.google.com/maps/dir/?api=1&destination=C-248,+East+End+Apartments,+New+Ashok+Nagar,+New+Delhi+110096" target="_blank"
+         data-en="📍 Get Directions" data-ta="📍 வழி காட்டுங்கள்">📍 Get Directions</a>
+    </div>
   </div>
 </section>
 
 <!-- WhatsApp -->
-<a id="wa" href="https://wa.me/918248317214" target="_blank">💬</a>
+<a id="wa" href="https://wa.me/918248317214" target="_blank" title="WhatsApp">💬</a>
 
 <!-- Footer -->
 <footer>
-  © 2025 Arun Prakash, Advocate — All Rights Reserved<br>
-  <small>Compliant with Bar Council of India Rules</small>
+  <p>© 2025 Arun Prakash, Advocate — All Rights Reserved</p>
+  <p style="margin-top:6px;" data-en="Compliant with Bar Council of India Rules" data-ta="இந்திய வழக்கறிஞர் கவுன்சில் விதிகளுக்கு இணங்குகிறது">Compliant with Bar Council of India Rules</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Disclaimer Modal Once Per Session
+<script>
+  // ── DISCLAIMER ──
   window.onload = function() {
     if (!sessionStorage.getItem("disclaimerShown")) {
       document.getElementById("disclaimerModal").style.display = "flex";
     }
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark") applyTheme("dark");
+    const savedLang = localStorage.getItem("lang");
+    if (savedLang === "ta") applyLang("ta");
   };
   function dismissDisclaimer() {
     sessionStorage.setItem("disclaimerShown", "true");
-    document.getElementById("disclaimerModal").style
+    document.getElementById("disclaimerModal").style.display = "none";
+  }
+
+  // ── THEME ──
+  let currentTheme = "light";
+  function toggleTheme() {
+    currentTheme = currentTheme === "light" ? "dark" : "light";
+    applyTheme(currentTheme);
+    localStorage.setItem("theme", currentTheme);
+  }
+  function applyTheme(t) {
+    currentTheme = t;
+    document.documentElement.setAttribute("data-theme", t === "dark" ? "dark" : "");
+    document.getElementById("themeBtn").textContent = t === "dark" ? "☀️ Light" : "🌙 Dark";
+  }
+
+  // ── LANGUAGE ──
+  let currentLang = "en";
+  function toggleLang() {
+    currentLang = currentLang === "en" ? "ta" : "en";
+    applyLang(currentLang);
+    localStorage.setItem("lang", currentLang);
+  }
+  function applyLang(lang) {
+    currentLang = lang;
+    document.getElementById("langBtn").textContent = lang === "en" ? "தமிழ்" : "English";
+    document.querySelectorAll("[data-en]").forEach(el => {
+      el.textContent = el.getAttribute("data-" + lang) || el.getAttribute("data-en");
+    });
+    document.documentElement.lang = lang === "ta" ? "ta" : "en";
+  }
+
+  // ── CREDENTIALS ──
+  function toggleCreds() {
+    const c = document.getElementById("creds");
+    c.style.display = c.style.display === "block" ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>
