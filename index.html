@@ -654,46 +654,70 @@ footer {
   <p style="margin-top:6px;" data-en="Compliant with Bar Council of India Rules" data-ta="இந்திய வழக்கறிஞர் கவுன்சில் விதிகளுக்கு இணங்குகிறது">Compliant with Bar Council of India Rules</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // ── DISCLAIMER ──
-  window.onload = function() {
-    if (!sessionStorage.getItem("disclaimerShown")) {
-      document.getElementById("disclaimerModal").style.display = "flex";
-    }
-    const saved = localStorage.getItem("theme");
-    if (saved === "dark") applyTheme("dark");
-    const savedLang = localStorage.getItem("lang");
-    if (savedLang === "ta") applyLang("ta");
-  };
-  function dismissDisclaimer() {
-    sessionStorage.setItem("disclaimerShown", "true");
-    document.getElementById("disclaimerModal").style.display = "none";
-  }
+<script>
+  var currentTheme = "light";
+  var currentLang = "en";
 
-  // ── THEME ──
-  let currentTheme = "light";
   function toggleTheme() {
     currentTheme = currentTheme === "light" ? "dark" : "light";
     applyTheme(currentTheme);
-    localStorage.setItem("theme", currentTheme);
-  }
-  function applyTheme(t) {
-    currentTheme = t;
-    document.documentElement.setAttribute("data-theme", t === "dark" ? "dark" : "");
-    document.getElementById("themeBtn").textContent = t === "dark" ? "☀️ Light" : "🌙 Dark";
+    try { localStorage.setItem("theme", currentTheme); } catch(e) {}
   }
 
-  // ── LANGUAGE ──
-  let currentLang = "en";
+  function applyTheme(t) {
+    currentTheme = t;
+    if (t === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      document.documentElement.removeAttribute("data-theme");
+    }
+    var btn = document.getElementById("themeBtn");
+    if (btn) btn.textContent = t === "dark" ? "☀️ Light" : "🌙 Dark";
+  }
+
   function toggleLang() {
     currentLang = currentLang === "en" ? "ta" : "en";
     applyLang(currentLang);
-    localStorage.setItem("lang", currentLang);
+    try { localStorage.setItem("lang", currentLang); } catch(e) {}
   }
+
   function applyLang(lang) {
     currentLang = lang;
-    document.getElementById("langBtn").textContent = lang === "en" ? "தமிழ்" : "English";
-    document.querySelectorAll("[data-en]").forEach(el => {
-      el.textContent = el.getAttribute("data-" + lang) || el.getAttribute("data-en");
-    });
-    document.documentE
+    var btn = document.getElementById("langBtn");
+    if (btn) btn.textContent = lang === "en" ? "தமிழ்" : "English";
+    var els = document.querySelectorAll("[data-en]");
+    for (var i = 0; i < els.length; i++) {
+      var val = els[i].getAttribute("data-" + lang);
+      if (val) els[i].textContent = val;
+    }
+    document.documentElement.lang = lang === "ta" ? "ta" : "en";
+  }
+
+  function dismissDisclaimer() {
+    try { sessionStorage.setItem("disclaimerShown", "true"); } catch(e) {}
+    document.getElementById("disclaimerModal").style.display = "none";
+  }
+
+  function toggleCreds() {
+    var c = document.getElementById("creds");
+    c.style.display = c.style.display === "block" ? "none" : "block";
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    try {
+      if (!sessionStorage.getItem("disclaimerShown")) {
+        document.getElementById("disclaimerModal").style.display = "flex";
+      }
+    } catch(e) {}
+    try {
+      var savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") applyTheme("dark");
+    } catch(e) {}
+    try {
+      var savedLang = localStorage.getItem("lang");
+      if (savedLang === "ta") applyLang("ta");
+    } catch(e) {}
+  });
+</script>
+</body>
+</html>
