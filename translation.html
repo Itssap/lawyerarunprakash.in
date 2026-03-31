@@ -471,11 +471,14 @@ footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
         <div style="background:#fff;border:1px solid #a0ddb8;border-radius:10px;padding:20px;margin-top:8px;">
           <p style="font-size:15px;font-weight:600;color:#1a3a5c;margin-bottom:6px;">📎 Next Step — Upload Your Document</p>
           <p style="font-size:13px;color:#555;margin-bottom:16px;">Please upload your Tamil document using the button below. Maximum file size: <strong>50MB</strong>. Accepted formats: PDF, JPG, PNG, Word.</p>
-          <a href="https://forms.gle/4oYrzFGjoXThWZye9" target="_blank"
-             style="display:inline-block;background:#1a3a5c;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">
+          <button onclick="openUploadModal()"
+             style="display:inline-block;background:#1a3a5c;color:#fff;padding:12px 24px;border-radius:8px;border:none;font-weight:600;font-size:14px;cursor:pointer;">
             📤 Upload Document →
-          </a>
+          </button>
           <p style="font-size:11px;color:#888;margin-top:12px;">Your file will be securely uploaded to a private folder. Alternatively you can send via WhatsApp or email.</p>
+        </div>
+        <div id="uploadedStrip" style="display:none;background:#f0faf5;border:1px solid #a0ddb8;border-radius:8px;padding:14px 20px;margin-top:14px;">
+          <p style="color:#2d7a4f;font-weight:600;font-size:14px;margin:0;">✅ File uploaded successfully! We will review your request and revert back as soon as possible.</p>
         </div>
       </div>
     </div>
@@ -496,6 +499,27 @@ footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
   <p style="margin-top:6px;">Compliant with Bar Council of India Rules</p>
 </footer>
 
+
+<!-- UPLOAD MODAL -->
+<div id="uploadModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:9998;padding:20px;flex-direction:column;align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:12px;width:100%;max-width:700px;overflow:hidden;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:#f5f7fa;border-bottom:1px solid #e0e5ee;">
+      <div>
+        <h4 style="font-size:14px;color:#1a3a5c;font-weight:600;margin:0;">Upload Your Document</h4>
+        <p style="font-size:11px;color:#888;margin:2px 0 0;">Max 50MB — PDF, JPG, PNG, Word</p>
+      </div>
+      <button onclick="closeUploadModal()" style="background:none;border:none;font-size:22px;cursor:pointer;color:#555;line-height:1;">✕</button>
+    </div>
+    <iframe src="https://forms.gle/4oYrzFGjoXThWZye9" style="width:100%;height:500px;border:none;" title="Upload Document"></iframe>
+  </div>
+  <button onclick="markUploaded()" style="margin-top:16px;background:#2d7a4f;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;">✅ Done — File Uploaded Successfully</button>
+</div>
+
+<!-- UPLOADED SUCCESS STRIP -->
+<div id="uploadedStrip" style="display:none;background:#f0faf5;border:1px solid #a0ddb8;border-radius:8px;padding:14px 20px;margin-top:16px;text-align:center;">
+  <p style="color:#2d7a4f;font-weight:600;font-size:14px;margin:0;">✅ File uploaded successfully! We will review your request and revert back as soon as possible.</p>
+</div>
+
 <!-- WA FLOAT -->
 <a id="wa" href="https://wa.me/918248317214" target="_blank" title="WhatsApp">💬</a>
 
@@ -507,7 +531,7 @@ footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
       <button class="pdf-close" onclick="closePDF('scaora')">✕</button>
     </div>
     <div class="pdf-modal-body">
-      <iframe src="https://raw.githubusercontent.com/Itssap/lawyerarunprakash.in/main/scaora-empanelment.pdf.pdf" title="SCAORA Empanelment Notice"></iframe>
+      <iframe src="https://drive.google.com/file/d/1gu2gs8SvL2Ugah0wckOz8xF-DJzsmjSA/preview" title="SCAORA Empanelment Notice"></iframe>
     </div>
   </div>
 </div>
@@ -519,12 +543,39 @@ footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
       <button class="pdf-close" onclick="closePDF('sclsc')">✕</button>
     </div>
     <div class="pdf-modal-body">
-      <iframe src="https://raw.githubusercontent.com/Itssap/lawyerarunprakash.in/main/sclsc-empanelment.pdf.pdf" title="SCLSC Empanelment Notice"></iframe>
+      <iframe src="https://drive.google.com/file/d/16tYqE-nmbP2aJB3MT8ub8odmycexHqap/preview" title="SCLSC Empanelment Notice"></iframe>
     </div>
   </div>
 </div>
 
 <script>
+function openUploadModal() {
+  const modal = document.getElementById('uploadModal');
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeUploadModal() {
+  const modal = document.getElementById('uploadModal');
+  modal.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+function markUploaded() {
+  closeUploadModal();
+  document.getElementById('uploadedStrip').style.display = 'block';
+  document.getElementById('uploadedStrip').scrollIntoView({behavior:'smooth'});
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const uploadModal = document.getElementById('uploadModal');
+  if (uploadModal) {
+    uploadModal.addEventListener('click', function(e) {
+      if (e.target === this) closeUploadModal();
+    });
+  }
+});
+
 function openPDF(type) {
   document.getElementById(type + 'PDF').classList.add('active');
   document.body.style.overflow = 'hidden';
